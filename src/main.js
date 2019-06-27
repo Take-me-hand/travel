@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 // 初始化样式文件
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 引入一像素问题解决文件
-import './assets/styles/border.css'
+import 'styles/border.css'
+// 引入字体图标样式表
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 // 解决移动端300毫秒问题
