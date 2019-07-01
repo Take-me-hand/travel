@@ -2,8 +2,8 @@
    <div>
       <city-header></city-header>
       <city-search></city-search>
-      <city-list :cities="cities" :hotCities="hotCities"></city-list>
-      <city-alphabet :cities="cities"></city-alphabet>
+      <city-list :cities="cities" :hotCities="hotCities" :letter="letter"></city-list>
+      <city-alphabet :cities="cities" @change="getLetter"></city-alphabet>
    </div>
 </template>
 <script>
@@ -17,7 +17,8 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   components: {
@@ -38,6 +39,10 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
+    },
+    // 获取alphabet子组件传过来的值
+    getLetter (letter) {
+      this.letter = letter
     }
   },
   mounted () {
