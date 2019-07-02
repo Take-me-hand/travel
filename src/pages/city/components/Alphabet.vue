@@ -57,7 +57,7 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
-        setTimeout(() => {
+        this.timer = setTimeout(() => {
           // 获取手指触摸屏幕到顶部搜索框下沿的高度
           const touchY = e.touches[0].clientY - 79
           // 计算手指触摸位置的字母索引
